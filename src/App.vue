@@ -1,26 +1,34 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <navBar class="navbar"/>
+  <AppBody class="appbody"/>
+  
+  <!-- <HelloWorld msg="Hello World!"/> -->
+  <!-- <button @click="count++">count is: {{count}}</button> -->
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+// import func from 'vue-editor-bridge'
+// import HelloWorld from './components/HelloWorld.vue'
+import NavBar from './components/Nav.vue'
+import AppBody from './components/Body.vue'
+
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
-  }
+    // HelloWorld
+    NavBar,
+    AppBody
+  },
+
 }
+ 
 </script>
 
+
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+ 
+  .navbar{
+    margin-bottom: 100px ;
+  }
 </style>
