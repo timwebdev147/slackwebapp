@@ -1,5 +1,5 @@
 <template>
-  <nav v-bind:class="{pushDown: isActive, sticky: scrollPosition > 2}">
+  <nav v-bind:class="{pushDown: isActive, sticky: scrollPosition > 100}">
     
     <ul>
       <a href="">Slack</a>
@@ -36,6 +36,9 @@
 
     </div>
   </nav>
+  <div v-bind:class="{visible: scrollPosition > 100}">
+     
+  </div>
   
   <!-- <HelloWorld msg="Hello World!"/> -->
   <!-- <button @click="count++">count is: {{count}}</button> -->
@@ -73,6 +76,9 @@ export default {
     },
     updateScroll () {
       this.scrollPosition = window.scrollY;
+      // if (this.scrollPosition > 5) {
+      //   this.mT
+      // }
       console.log(this.scrollPosition)
     }
     },
@@ -94,6 +100,13 @@ export default {
 }
 button {
   font-weight: bold;
+}
+.hidden{
+  display: none;
+}
+.visible{
+  display: block;
+  height: 80px;
 }
 nav{
   width: 100%;
@@ -200,6 +213,11 @@ nav > ol > a > .btn2{
     z-index: 5;
     background-color: #fff;
     box-shadow: 0px 0px 4px grey;
+    animation-name: nav;
+    animation-delay: 0s;
+    animation-duration: 0.1s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
   }
   .pushDown{
   /* padding-bottom: 220px; */
@@ -303,6 +321,10 @@ nav > div > ol{
           height: 0px;}
     to {background-color: rgba(128, 128, 128, 0.1);
         height: 250px;}
+  }
+  @keyframes nav {
+    from {opacity: 0.6;}
+    to {opacity: 1;}
   }
   
   .active{

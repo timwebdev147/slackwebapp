@@ -38,9 +38,9 @@
 
             <div class="row">
                 <div class="column">
-                    <i class="fa fa-headphones " aria-hidden="true"></i>
-                    <h1>Customer Service</h1>
-                    <p>Keep your customers happy by getting answers and reaching resolutions with help from your organisation</p>
+                    <i class="fa fa-briefcase " aria-hidden="true"></i>
+                    <h1>Sales</h1>
+                    <p>coordinate with your internal while working towards new deals with clients, all in Slack.</p>
                     <i class="fa fa-arrow-right-long"></i>
                 </div>
                 
@@ -71,6 +71,56 @@
                     </div>
                 
             </div>        
+        </div>
+    </div>
+    <div class="companies">
+        <div class="company-text">
+            <h1>At all kind of companies</h1>
+            <p>Slack works for a wide range of companies even ones with specialized workflows or strict compliance requirement</p>
+        </div>
+        <div class="grid">
+        <div class="row">
+            <div class="column">
+                <i class="fa fa-chalkboard" aria-hidden="true"></i>
+                    <h1>Education</h1>
+                    <p>Engage student and connect your entire campus with collaborative approach to distant learning.</p>
+                    <i class="fa fa-arrow-right-long"></i>
+            </div>
+            <div class="column">
+                <i class="fa fa-desktop" aria-hidden="true"></i>
+                    <h1>Media</h1>
+                    <p>Expedite production, communicate openly and automate your publishing process in your newsroom.</p>
+                    <i class="fa fa-arrow-right-long"></i>
+            </div>
+            <div class="column">
+                <i class="fa fa-coins" aria-hidden="true"></i>
+                    <h1>Financial Services</h1>
+                    <p>Connect your systems with internal and external teams to digitally transform your organisation</p>
+                    <i class="fa fa-arrow-right-long"></i>
+            </div>
+        </div>
+        </div>
+    </div>
+    <div class="amazing">
+        <div class="amazing-text">
+            <h1>Doing amazing things</h1>
+            <p>Like a many-trick pony, Slack can adapt to fit the needs of just about anything you need to start at work</p>
+        </div>
+        <div class="grid">
+            <div class="row">
+                <div class="column">
+                    <i class="fa fa-video" aria-hidden="true"></i>
+                    <h1>Media</h1>
+                    <p>Stay connected and productive while working alongside your co-workers, even if you're working from wherever.</p>
+                    <i class="fa fa-arrow-right-long"></i>
+                </div>
+                <div class="column">
+                    <i class="fa fa-desktop" aria-hidden="true"></i>
+                    <h1>Task management</h1>
+                    <p>Integrate your third party tools with Slack to bring your to-do list, your team and all your work talk together.</p>
+                    <i class="fa fa-arrow-right-long"></i>
+                </div>
+            </div>
         </div>
     </div>
 </template>
@@ -111,7 +161,7 @@ export default {
   margin-left: 20px;
 }
 .teams{
-    height: 120vh;
+    height: 115vh;
     max-width: 100%;
     /* border: 1px solid black; */
     background-color: #fdf1f3;
@@ -123,15 +173,40 @@ export default {
     padding-top: 30px ;
     
 }
-.team-text{
+.companies{
+    height: 70vh;
+    max-width: 100%;
+    /* border: 1px solid black; */
+    background-color: #fdf1f3;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding-left: 50px;
+    padding-top: 30px ;
+    padding-right: 50px;
+}
+.amazing{
+    height: 70vh;
+    max-width: 100%;
+    /* border: 1px solid black; */
+    background-color: #fdf1f3;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 50px;
+    padding-top: 30px ;
+}
+.team-text, .company-text, .amazing-text{
     width: 33%;
     
 }
-.team-text > h1{
+.team-text > h1, .company-text > h1, .amazing-text > h1{
     text-align: left;
     color: black;
 }
-.team-text > p {
+.team-text > p, .company-text > p, .amazing-text > p{
     text-align: left;
     color: black;
     font-size: 14px;
@@ -150,6 +225,32 @@ export default {
     right: 50px;
     transform: scaleX(-1) rotate(35deg);
 }
+.companies::before{
+    content: '';
+    background-image: url('/src/assets/bookndcoffe.png');
+    z-index: 1;
+    width: 40%;
+    height: 50vh;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: top right;
+    position: absolute;
+    top: -80px;
+    left: 0;
+}
+.amazing::before{
+     content: '';
+    background-image: url('/src/assets/bookndcoffe.png');
+    z-index: 1;
+    width: 40%;
+    height: 50vh;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: top right;
+    position: absolute;
+    top: -80px;
+    right: 0;
+}
 .grid{
     /* border: 1px solid black; */
     width: 75%;
@@ -159,8 +260,14 @@ export default {
     flex-direction: column;
     justify-content: space-between;
     margin-top: 20px;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
     /* flex-wrap: wrap; */
+}
+.amazing > .grid{
+    width: 50%;
+}
+.amazing > .grid > .row > .column{
+    width: calc(48.5% - 40px);
 }
 .row{
     display: flex;
@@ -266,7 +373,7 @@ export default {
     background-color: white;
     box-shadow: 2px 2px 4px rgb(177, 176, 176);
 }
-.fa-headphones, .fa-desktop, .fa-file-code,.fa-person,.fa-shield,.fa-file {
+.fa-headphones, .fa-video, .fa-chalkboard, .fa-coins, .fa-briefcase, .fa-desktop, .fa-file-code,.fa-person,.fa-shield,.fa-file {
     font-size: 40px;
     margin-top: 20px;
     color: black;
@@ -291,7 +398,7 @@ export default {
 
  <style>
  @media (min-width: 375px) and (max-width: 812px) {
-     .team-text > h1{
+     .team-text > h1, .company-text > h1, .amazing-text > h1{
     color: black;
     font-weight: 800;
     font-size: 30px;
@@ -299,12 +406,18 @@ export default {
     /* padding: 0 25px; */
     
 }
-.team-text{
+.team-text, .company-text, .amazing-text{
     
     width: 90%;
     z-index: 1;
     /* border: 1px solid black; */
     height: 200px;
+}
+.team-text > p, .company-text > p, .amazing-text > p{
+    color: black;
+    font-weight: bold;
+    text-align: center;
+    /* padding: 0 50px; */
 }
 /* .team-text{
    
@@ -313,7 +426,24 @@ export default {
     align-items: center;
     padding-left: 0;
     min-height: calc(250vh + 200px);
+    /* border: 1px solid black; */
 }
+.companies{
+    align-items: center;
+    padding-left: 0;
+    padding-right: 0;
+    min-height: calc(127vh + 200px);
+    /* border: 1px solid black; */
+}
+.amazing{
+    align-items: center;
+    padding-left: 0;
+    padding-right: 0;
+    min-height: calc(83.3vh + 200px);
+    /* border: 1px solid black; */
+    /* margin-top: 20px; */
+}
+
 .grid{
     width: 100%;
     min-height: 250vh;
@@ -322,6 +452,30 @@ export default {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    /* border: 1px solid black; */
+}
+.companies > .grid {
+    width: 100%;
+    min-height: 125vh;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid black; */
+    align-items: center;
+    justify-content: space-between;
+}
+.amazing > .grid{
+     width: 100%;
+    min-height: 83.3vh;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.amazing > .grid > .row > .column{
+    width: calc(100% - 40px);
+    height: 48.5%;
 }
 .row{
     width: 90%;
@@ -359,12 +513,7 @@ export default {
     /* display: flex;
     justify-content: space-between; */
 }
-.team-text > p{
-    color: black;
-    font-weight: bold;
-    text-align: center;
-    /* padding: 0 50px; */
-}
+
 .column.column-row{
     /* margin: 50px 50px 0 250px; */
     padding: 0;
@@ -391,6 +540,47 @@ export default {
   padding: 5px 15px;
   color: #4a154b;
   margin-left: 20px;
+}
+
+.teams::before{
+    content: '';
+    background-image: url('/src/assets/pngegg.png');
+    z-index: 1;
+    width: 30%;
+    height: 30vh;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: top right;
+    position: absolute;
+    top: -45px;
+    right: 50px;
+    transform: scaleX(-1) rotate(35deg);
+}
+.companies::before{
+    content: '';
+    background-image: url('/src/assets/bookndcoffe.png');
+    z-index: 1;
+    width: 30%;
+    height: 30vh;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: top right;
+    position: absolute;
+    top: -45px;
+    left: 0;
+}
+.amazing::before{
+     content: '';
+    background-image: url('/src/assets/bookndcoffe.png');
+    z-index: 1;
+    width: 30%;
+    height: 30vh;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: top right;
+    position: absolute;
+    top: -45px;
+    right: 0;
 }
  }
  </style>
