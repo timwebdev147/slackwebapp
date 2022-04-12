@@ -123,6 +123,17 @@
             </div>
         </div>
     </div>
+    <div class="reviews">
+        <div class="reviews-text">
+        <h1>Learn how real companies get results with Slack </h1>
+        </div>
+        <div class="row">
+            <div class="column"></div>
+            <div class="column"></div>
+            <div class="column"></div>
+            <div class="column"></div>
+        </div>
+    </div>
 </template>
 
 <script>
@@ -171,6 +182,7 @@ export default {
     align-items: flex-start;
     padding-left: 50px;
     padding-top: 30px ;
+    padding-right: 50px;
     
 }
 .companies{
@@ -197,6 +209,14 @@ export default {
     align-items: flex-start;
     padding-left: 50px;
     padding-top: 30px ;
+}
+.reviews-text > h1{
+    text-align: center;
+    color: black;
+}
+.reviews-text{
+    padding: 20px 0px;
+    border: 1px solid black;
 }
 .team-text, .company-text, .amazing-text{
     width: 33%;
@@ -277,6 +297,38 @@ export default {
     height: 48%;
     justify-content: space-between;
     /* border: 1px solid black; */
+}
+.reviews{
+     height: 80vh;
+    max-width: 100%;
+    border: 1px solid black;
+    background-color: #fdf1f3;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    /* align-items: flex-start; */
+    padding-left: 50px;
+    padding-right: 50px;
+    /* padding-top: 30px ; */
+}
+.reviews > .row{
+     display: flex;
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+    width: 100%;
+    height: 70%;
+    justify-content: space-between;
+    border: 1px solid black;
+}
+.reviews > .row > .column{
+    width: calc(24% - 40px);
+    height: calc(100% - 40px);
+    /* border: 1px solid black; */
+    background-color: white;
+    box-shadow: 2px 2px 6px rgb(177, 176, 176);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
 }
 .row > .column{
     width: calc(32% - 40px);
@@ -425,6 +477,7 @@ export default {
 .teams{
     align-items: center;
     padding-left: 0;
+    padding-right: 0;
     min-height: calc(250vh + 200px);
     /* border: 1px solid black; */
 }
