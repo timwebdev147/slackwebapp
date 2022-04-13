@@ -128,18 +128,69 @@
         <h1>Learn how real companies get results with Slack </h1>
         </div>
         <div class="row">
-            <div class="column"></div>
-            <div class="column"></div>
-            <div class="column"></div>
-            <div class="column"></div>
+            <div class="column">
+                <div>
+                <img src="../assets/zendesk-customer.jpg" alt="">
+                </div>
+                <div>
+                <p>How zendesk delivers exceptional customer Services with Slack</p>
+                </div>
+                <p>{{read}}</p>
+                <i class="fa fa-arrow-right-long"></i>
+            </div>
+            <div class="column">
+                <div>
+                <img src="../assets/lyft-slack-customer.jpg" alt="">
+                </div>
+                <div>
+                <p>Mission-critical sales work at lyft Business</p>
+                </div>
+                <p>{{read}}</p>
+                <i class="fa fa-arrow-right-long"></i>
+            </div>
+            <div class="column">
+                <div>
+                <img src="../assets/nine-customer.jpg" alt="">
+                </div>
+                <div>
+                <p>Nine's publishing divisions break news faster with Slack</p>
+                </div>
+                <p>{{read}}</p>
+                <i class="fa fa-arrow-right-long"></i>
+            </div>
+            <div class="column">
+                <div>
+                <img src="../assets/Snowflake-customer.jpg" alt="">
+                </div>
+                <div>
+                <p>Snow flakes boosts sales and crystalizes partner relationships with slack Connect</p>
+                </div>
+                <p>{{read}}</p>
+                <i class="fa fa-arrow-right-long"></i>
+            </div>
+        </div>
+        <div class="partners">
+            <img src="../assets/TD_Ameritrade-Logo.wine.svg" alt="">
+            <img src="../assets/Target_Corporation-Logo.wine.svg" alt="">
+            <img src="../assets/Uber-Logo.wine.svg" alt="">
+            <img src="../assets/MedicAnimal-Logo.wine.svg" alt="">
+            <img src="../assets/Netflix-Logo.wine.svg" alt="">
+            <img src="../assets/US_Department_of_Veterans_Affairs_logo.svg" alt="">
+            <img src="../assets/Intuit-Logo.wine.svg" alt="">
+            <img src="../assets/Expedia-Logo.wine.svg" alt="">
         </div>
     </div>
 </template>
 
 <script>
 export default {
-    name: 'AppBody'
-    
+    name: 'AppBody',
+    data() {
+        return {
+            read: 'READ STORY',
+
+        }
+    }
 }
 </script>
 
@@ -157,6 +208,7 @@ export default {
 }
 .accordion{
     margin-bottom: 50px;
+    margin-top: 100px;
 }
 .btn2{
   background: #4a154b;
@@ -216,7 +268,7 @@ export default {
 }
 .reviews-text{
     padding: 20px 0px;
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 .team-text, .company-text, .amazing-text{
     width: 33%;
@@ -287,7 +339,7 @@ export default {
     width: 50%;
 }
 .amazing > .grid > .row > .column{
-    width: calc(48.5% - 40px);
+    width: calc(48.5% - 30px);
 }
 .row{
     display: flex;
@@ -299,10 +351,10 @@ export default {
     /* border: 1px solid black; */
 }
 .reviews{
-     height: 80vh;
+    height: 80vh;
     max-width: 100%;
-    border: 1px solid black;
-    background-color: #fdf1f3;
+    /* border: 1px solid black; */
+    background-color: #fff;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -318,26 +370,81 @@ export default {
     width: 100%;
     height: 70%;
     justify-content: space-between;
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 .reviews > .row > .column{
-    width: calc(24% - 40px);
-    height: calc(100% - 40px);
+    width: calc(23% - 30px);
+    height: calc(100% - 30px);
     /* border: 1px solid black; */
     background-color: white;
-    box-shadow: 2px 2px 6px rgb(177, 176, 176);
-    padding: 20px;
+    box-shadow: 2px 2px 25px rgb(177, 176, 176);
+    padding: 15px;
     display: flex;
     flex-direction: column;
 }
+.reviews > .row > .column > div > img{
+    width: 100%;
+    height: 100%;
+}
+.reviews > .row > .column > div:first-child{
+    width: 100%;
+    height: 60%;
+    /* border: 1px solid black; */
+}
+.reviews > .row > .column > div:nth-child(2){
+    height: 40%;
+    padding-right: 50px;
+    /* border: 1px solid black; */
+}
+.reviews > .row > .column::after{
+    content: 'Customer Story';
+    position: absolute;
+    top: 220px;
+    font-size: 12px;
+}
+.reviews > .row > .column > div > p{
+    color: black;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: left;
+    /* border: 1px solid black; */
+    margin: 30px 0 0 0;
+}
+.reviews > .row > .column > p{
+    margin: 0;
+    color: black;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: left;
+}
+.reviews > .partners{
+    height: 10vh;
+    width: 100%;
+    /* border: 1px solid black; */
+    background-color: #fff;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* align-items: flex-start; */
+    /* padding-left: 50px; */
+    /* padding-right: 50px; */
+    margin-top: 80px;
+}
+.reviews > .partners > img{
+    width: 12%;
+    height: 100%;
+    /* border: 1px solid black; */
+    opacity: 0.9;
+}
 .row > .column{
-    width: calc(32% - 40px);
+    width: calc(32% - 30px);
     height: 100%;
     /* border: 1px solid black; */
     background-color: white;
-    box-shadow: 2px 2px 4px rgb(177, 176, 176);
-    padding-left: 20px;
-    padding-right: 20px;
+    box-shadow: 2px 2px 8px rgb(177, 176, 176);
+    padding-left: 15px;
+    padding-right: 15px;
 }
 .column-row{
     width: 66%;
@@ -397,11 +504,11 @@ export default {
     position: relative;
 }
 .column.column-row > div{
-    width: calc(100% - 40px);
+    width: calc(100% - 30px);
      display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 0 20px;
+    padding: 0 15px;
 
 }
 .column.column-row > div > h1{
@@ -496,7 +603,53 @@ export default {
     /* border: 1px solid black; */
     /* margin-top: 20px; */
 }
-
+.reviews{
+    align-items: center;
+    padding-left: 0;
+    padding-right: 0;
+    height: calc(270vh + 200px);
+    /* border: 1px solid black; */
+    
+}
+.reviews > .row{
+    width: 90%;
+    height: 80%;
+    flex-direction: column;
+    display: flex;
+    justify-content: space-between;
+    /* border: 1px solid black; */
+    /* margin-bottom: 20px; */
+}
+.reviews > .row > .column{
+    width: calc(100% - 30px);
+    height: calc(23% - 30px);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0;
+    
+}
+.reviews > .partners{
+    height: 10vh;
+    width: 90%;
+    /* border: 1px solid black; */
+    background-color: #fff;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    /* align-items: flex-start; */
+    /* padding-left: 50px; */
+    /* padding-right: 50px; */
+    margin-top: 50px;
+}
+.reviews > .partners > img{
+    width: 24%;
+    height: 100%;
+    /* border: 1px solid black; */
+    opacity: 0.9;
+}
 .grid{
     width: 100%;
     min-height: 250vh;
@@ -527,7 +680,7 @@ export default {
     justify-content: space-between;
 }
 .amazing > .grid > .row > .column{
-    width: calc(100% - 40px);
+    width: calc(100% - 30px);
     height: 48.5%;
 }
 .row{
@@ -539,14 +692,14 @@ export default {
     margin-bottom: 20px;
 }
 .row >.column{
-    width: calc(100% - 40px);
+    width: calc(100% - 30px);
     height: 32%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     margin: 0;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 .column{
     position: relative;
