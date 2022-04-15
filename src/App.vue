@@ -3,6 +3,7 @@
   <AppBody class="appbody"/>
   <faQ class="faq"/>
   <fooTer/>
+  <!-- <font-awesome-icon icon="fa-Car" /> -->
   <!-- <HelloWorld msg="Hello World!"/> -->
   <!-- <button @click="count++">count is: {{count}}</button> -->
 </template>

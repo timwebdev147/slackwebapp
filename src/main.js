@@ -9,6 +9,7 @@ import { far } from '@fortawesome/free-regular-svg-icons'
 library.add(fas);
 library.add(far)
 library.add(faB)
+// library.add(fat))
 dom.watch();
 
 createApp(App).component('font-awesome-icon', FontAwesomeIcon)

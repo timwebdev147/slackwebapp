@@ -105,7 +105,7 @@ export default {
     .section > .faq > .questions > button{
         position: absolute;
         right: 10px;
-        top: 25px;
+        top: 30%;
         background-color: transparent;
         border: none;
     }
@@ -116,28 +116,32 @@ export default {
     }
     .section > .faq > .questions > p{
         display: none;
+        position: absolute;
     }
     .section > .faq > hr{
         opacity: 0.2;
         
     }
     .section > .faq > .active{
-        height: 20vh;
+        /* height: 20vh; */
+         padding-bottom: 70px ;
         transition: 0.5s;
     }
     .section > .faq > .active > p{
         display: block;
+        position: absolute;
+        bottom: 2px;
         text-align: left;
     }
 </style>
 <style scoped>
 @media (min-width: 375px) and (max-width: 812px){
     .section{
-        width: calc(100% - 100px);
+        width: calc(100% - 30px);
         min-height: 45vh;
         /* border: 1px solid black; */
         margin-top: 20px;
-        padding: 10px 50px;
+        padding: 0 15px;
     }
     .section > .faq{
         min-height: 50vh;
@@ -146,9 +150,10 @@ export default {
         /* border: 1px solid red; */
     }
     .section > .faq > .questions{
-        width: 100%;
+        width: calc(100% - 40px) ;
         height: 10vh;
         /* border: 1px solid black; */
+        padding: 0 20px;
         position: relative;
         display: flex;
         justify-content: center;
@@ -156,7 +161,8 @@ export default {
         flex-direction: column;
     }
     .section > .faq > .active{
-        height: 25vh;
+        /* height: 25vh; */
+        padding-bottom: 100px ;
         transition: 0.5s;
     }
     

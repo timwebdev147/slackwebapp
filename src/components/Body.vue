@@ -629,6 +629,12 @@ export default {
     margin: 0;
     
 }
+.reviews > .row > .column::after{
+    content: 'Customer Story';
+    position: absolute;
+    top: 61%;
+    font-size: 12px;
+}
 .reviews > .partners{
     height: 10vh;
     width: 90%;
