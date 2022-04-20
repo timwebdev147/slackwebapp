@@ -36,9 +36,9 @@
 
     </div>
   </nav>
-  <!-- <div v-bind:class="{visible: scrollPosition > 100}"> -->
+  <div v-bind:class="{visible: scrollPosition > 100}">
      
-  <!-- </div> -->
+  </div>
   
   <!-- <HelloWorld msg="Hello World!"/> -->
   <!-- <button @click="count++">count is: {{count}}</button> -->
