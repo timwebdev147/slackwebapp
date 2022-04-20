@@ -1,5 +1,5 @@
 <template>
-  <nav v-bind:class="{pushDown: isActive, sticky: scrollPosition > 100}">
+  <nav v-bind:class="{sticky: scrollPosition > 100}">
     
     <ul>
       <a href="">Slack</a>
@@ -36,9 +36,9 @@
 
     </div>
   </nav>
-  <div v-bind:class="{visible: scrollPosition > 100}">
+  <!-- <div v-bind:class="{visible: scrollPosition > 100}"> -->
      
-  </div>
+  <!-- </div> -->
   
   <!-- <HelloWorld msg="Hello World!"/> -->
   <!-- <button @click="count++">count is: {{count}}</button> -->
@@ -202,7 +202,7 @@ nav > ol > a > .btn2{
   nav{
     min-height: 80px;
     justify-content: space-between;
-    
+    width: 100%;
     background-color: #fff
     
     
@@ -210,14 +210,19 @@ nav > ol > a > .btn2{
   }
   .sticky{
     position: fixed;
+    padding: 0;
+    margin: 0;
+    /* top: 0; */
+    /* left: 0; */
+    width: 100%;
     z-index: 5;
     background-color: #fff;
     box-shadow: 0px 0px 4px grey;
-    animation-name: nav;
+    /* animation-name: nav;
     animation-delay: 0s;
     animation-duration: 0.1s;
     animation-timing-function: ease-in;
-    animation-fill-mode: forwards;
+    animation-fill-mode: forwards; */
   }
   .pushDown{
   /* padding-bottom: 220px; */

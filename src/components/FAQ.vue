@@ -137,11 +137,11 @@ export default {
 <style scoped>
 @media (min-width: 375px) and (max-width: 812px){
     .section{
-        width: calc(100% - 30px);
+        width: calc(100%);
         min-height: 45vh;
         /* border: 1px solid black; */
         margin-top: 20px;
-        padding: 0 15px;
+        padding: 0;
     }
     .section > .faq{
         min-height: 50vh;

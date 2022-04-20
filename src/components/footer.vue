@@ -8,7 +8,7 @@
     </div>
 
     <footer>
-        <div class="footerNav">
+       <!-- <div class="footerNav">
             <div>
                 <h1>WHY SLACK?</h1>
                 <ul>
@@ -154,7 +154,7 @@
                     </a>
                 </ul>
             </div>
-        </div>
+        </div> -->
 
 
         <div class="copyright">
@@ -164,7 +164,7 @@
                     <a href="">Privacy</a>
                     <a href="">Terms</a>
                     <a href="">Cookie preferences</a>
-                    <a href="">COntact Us</a>
+                    <a href="">Contact Us</a>
                     <a href="">Change region</a>
                 </ul>
                 <p>
@@ -183,7 +183,7 @@
                 </ul>
             </div>
         </div>
-    </footer>
+    </footer> 
 </template>
 
 <script>
@@ -220,6 +220,7 @@ export default {
     footer{
         display: flex;
         flex-direction: column;
+        width: 100%;
         align-items: center;
         /* justify-content: center; */
         /* border: 1px solid black; */
@@ -305,6 +306,7 @@ export default {
     .preFooter{
         width: 100%;
         height: 30vh;
+        margin: 0;
         border: 1px solid black;
         background-color: #4a154b;
         display: flex;
@@ -330,13 +332,15 @@ export default {
         display: flex;
         flex-direction: column;
         align-items: center;
+        padding: 0;
+        margin: 0;
         /* justify-content: center; */
-        border: 1px solid black;
+        /* border: 1px solid black; */
     }
     footer > .footerNav{
         width: calc(100% - 30px) ;
         min-height: 20vh;
-        border: 1px solid black;
+        /* border: 1px solid black; */
         flex-wrap: wrap;
         display: flex;
         padding: 30px 15px;
@@ -354,15 +358,69 @@ export default {
     footer > .footerNav > div > ul {
         list-style-type: none;
         margin-left: 0;
-        border: 1px solid black;
+        /* border: 1px solid black; */
 
     }
     footer > .footerNav > div > ul > a >li{
         text-decoration: none;
         color: black;
         text-align: left;
-        border: 1px solid black;
+        /* border: 1px solid black; */
         margin-left: 0;
+    }
+     .copyright{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-between;
+        width: calc(100%) ;
+        /* padding: 0 50px; */
+    }
+    .copyright > div:nth-child(1){
+        /* border: 1px solid black; */
+        display: flex;
+        flex-direction: column;
+        /* justify-content: center; */
+        align-items: center;
+
+    }
+    .copyright > div:nth-child(1) > ul{
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        /* width: 100%; */
+        justify-content: center;
+        /* align-items: center; */
+        /* border: 1px solid black; */
+        /* height: 20vh; */
+    }
+    .copyright > div:nth-child(1) > ul > a{
+        /* margin-right: 40px; */
+        margin-bottom: 10px;
+        /* padding: 0 10px; */
+        width: 100%;
+        /* border: 1px solid black; */
+        text-decoration: none;
+        text-align: center;
+        color: black;
+        font-size: 13px;
+        font-weight: 600;
+    }
+    .copyright > div:nth-child(1) > p{
+        font-size: 11px;
+    }
+    .copyright > div:nth-child(2){
+        display: flex;
+        /* border: 1px solid black; */
+        justify-content: center;
+    }
+    .copyright > div:nth-child(2) > p{
+        color: blue;
+        /* border: 1px solid black; */
+    }
+    .copyright > div:nth-child(2) > ul {
+       width: 100px;
+       display: flex;
+       justify-content: space-between;
     }
 }
 </style>

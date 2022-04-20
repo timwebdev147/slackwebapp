@@ -180,9 +180,11 @@
             <img src="../assets/Expedia-Logo.wine.svg" alt="">
         </div>
     </div>
+    <fooTer/>
 </template>
 
 <script>
+
 export default {
     name: 'AppBody',
     data() {
