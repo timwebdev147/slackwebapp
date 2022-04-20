@@ -135,7 +135,7 @@ export default {
     }
 </style>
 <style scoped>
-@media (min-width: 375px) and (max-width: 812px){
+@media (min-width: 360px) and (max-width: 812px){
     .section{
         width: calc(100%);
         min-height: 45vh;

@@ -302,7 +302,7 @@ export default {
 
 
 <style scoped>
-@media (min-width: 375px) and (max-width: 812px){
+@media (min-width: 360px) and (max-width: 812px){
     .preFooter{
         width: 100%;
         height: 30vh;

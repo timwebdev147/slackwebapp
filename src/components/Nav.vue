@@ -198,7 +198,7 @@ nav > ol > a > .btn2{
 </style>
 
 <style>
-@media (min-width: 375px) and (max-width: 812px) {
+@media (min-width: 350px) and (max-width: 812px) {
   nav{
     min-height: 80px;
     justify-content: space-between;

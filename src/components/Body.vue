@@ -558,7 +558,7 @@ export default {
 
 
  <style>
- @media (min-width: 375px) and (max-width: 812px) {
+ @media (min-width: 360px) and (max-width: 812px) {
      .team-text > h1, .company-text > h1, .amazing-text > h1{
     color: black;
     font-weight: 800;
