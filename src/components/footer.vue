@@ -8,7 +8,7 @@
     </div>
 
     <footer>
-       <!-- <div class="footerNav">
+       <div class="footerNav">
             <div>
                 <h1>WHY SLACK?</h1>
                 <ul>
@@ -154,7 +154,7 @@
                     </a>
                 </ul>
             </div>
-        </div> -->
+        </div> 
 
 
         <div class="copyright">
